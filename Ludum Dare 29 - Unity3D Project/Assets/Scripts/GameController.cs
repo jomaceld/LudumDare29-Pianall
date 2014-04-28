@@ -181,6 +181,10 @@ public class GameController : MonoBehaviour {
 		}else if(levelFinished && Input.GetKeyUp(KeyCode.Space))
 		{
 			changeNextLevel();
+		}else
+		{
+			if(player.transform.position.y < -10)
+				Application.LoadLevel(Application.loadedLevel);
 		}
 
 		// Restart level if R is pressed
