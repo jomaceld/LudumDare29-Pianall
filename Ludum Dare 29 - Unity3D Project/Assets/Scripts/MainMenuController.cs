@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MainMenuController : MonoBehaviour {
 
-	public MainMenuTextElement ldtext,authorText, playButtonText, thanksText, titleText;
+	public MainMenuTextElement ldtext,authorText, playButtonText, thanksText, titleText, pressSpaceText;
 	float elapsedTime = 0;
 	bool animate = false;
 
@@ -14,6 +14,7 @@ public class MainMenuController : MonoBehaviour {
 		ldtext.hide(); authorText.hide(); playButtonText.hide(); 
 		thanksText.hide();
 		titleText.hide();
+		pressSpaceText.hide();
 
 		if(PlayerPrefs.GetInt("gameFinished") == 1)
 		{
@@ -27,6 +28,7 @@ public class MainMenuController : MonoBehaviour {
 			authorText.show();
 			playButtonText.show();
 			titleText.show();
+			pressSpaceText.show();
 		}
 	}
 
@@ -45,6 +47,7 @@ public class MainMenuController : MonoBehaviour {
 				authorText.show();
 				playButtonText.show();
 				titleText.show();
+				pressSpaceText.show();
 			}
 			PlayerPrefs.SetInt("gameFinished",0);
 		}
